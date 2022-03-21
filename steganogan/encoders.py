@@ -44,6 +44,7 @@ class BasicEncoder(nn.Module):
     def __init__(self, data_depth, hidden_size):
         super().__init__()
         self.version = '1'
+        data_depth = 2
         self.data_depth = data_depth
         self.hidden_size = hidden_size
         self._models = self._build_models()
