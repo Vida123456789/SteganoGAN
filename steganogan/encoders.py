@@ -25,9 +25,9 @@ class BasicEncoder(nn.Module):
     def _conv2d(self, in_channels, out_channels):
         return DeformConv2d(
             input=input,
-            offset,
-            weight,
-            mask
+            offset=offset,
+            weight=weight,
+            mask=mask
         )
 
     def _build_models(self):
