@@ -6,10 +6,10 @@ import torch.onnx
 from torchvision.ops.deform_conv import DeformConv2d
 
 input = torch.rand(4, 3, 10, 10)
-kh, kw = 3, 3
+kh, kw = 5, 5
 weight = torch.rand(5, 3, kh, kw)
-offset = torch.rand(4, 2 * kh * kw, 8, 8)
-mask = torch.rand(4, kh * kw, 8, 8)
+offset = torch.rand(8, 4 * kh * kw, 12, 12)
+mask = torch.rand(8, kh * kw, 12, 12)
 
 class BasicEncoder(nn.Module):
     """
